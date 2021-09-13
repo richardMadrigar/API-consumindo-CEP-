@@ -1,5 +1,25 @@
 'use strict';
 
+//TRABALHANDO COM A DOM 
+const limparFormulario = () => {
+    document.getElementById('endereco').value = ''
+    document.getElementById('bairro').value = ''
+    document.getElementById('cidade').value = ''
+    document.getElementById('estado').value = ''
+}
+
+const preencherFormulario = (endereco) => {
+    document.getElementById('endereco').value = endereco.logradouro
+    document.getElementById('bairro').value = endereco.bairro
+    document.getElementById('cidade').value = endereco.localidade
+    document.getElementById('estado').value = endereco.uf
+}
+
+const eNumero = (numero) => /^[0-9]+$/.test(numero); //verificando se todos são numeros
+
+const cepValido = (cep) => cep.length == 8 && eNumero(cep); //verificando se tem 8 digitos
+
+
 const pesquisarCep = async () => {
     limparFormulario(); //funcao para limpar toda vez que digitar alguma coisa 
 
@@ -21,26 +41,9 @@ const pesquisarCep = async () => {
     }
 }
 
-const eNumero = (numero) => /^[0-9]+$/.test(numero); //verificando se todos são numeros
-
-const cepValido = (cep) => cep.length == 8 && eNumero(cep); //verificando se tem 8 digitos
 
 
 
-//TRABALHANDO COM A DOM 
-const limparFormulario = () => {
-    document.getElementById('endereco').value = ''
-    document.getElementById('bairro').value = ''
-    document.getElementById('cidade').value = ''
-    document.getElementById('estado').value = ''
-}
-
-const preencherFormulario = (endereco) => {
-    document.getElementById('endereco').value = endereco.logradouro
-    document.getElementById('bairro').value = endereco.bairro
-    document.getElementById('cidade').value = endereco.localidade
-    document.getElementById('estado').value = endereco.uf
-}
 
 document.getElementById('cep') //pegando o id CEP
     .addEventListener('focusout', pesquisarCep); //add o event ao sair do focus => pesquisarCep()
