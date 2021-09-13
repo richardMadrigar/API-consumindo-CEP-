@@ -24,7 +24,7 @@ const pesquisarCep = async () => {
     limparFormulario(); //funcao para limpar toda vez que digitar alguma coisa 
 
     const cep = document.getElementById('cep').value //pegando o valor do input do cep
-    const url = `http://viacep.com.br/ws/${cep}/json/`; //passando a variavel para dentro do link
+    const url = `https://viacep.com.br/ws/${cep}/json/`; //passando a variavel para dentro do link
 
     if (cepValido(cep)) {
         const dados = await fetch(url) //await aguardando resolver o URL
