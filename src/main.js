@@ -1,19 +1,5 @@
 'use strict';
 
-//TRABALHANDO COM A DOM 
-const limparFormulario = () => {
-    document.getElementById('endereco').value = ''
-    document.getElementById('bairro').value = ''
-    document.getElementById('cidade').value = ''
-    document.getElementById('estado').value = ''
-}
-
-const preencherFormulario = (endereco) => {
-    document.getElementById('endereco').value = endereco.logradouro
-    document.getElementById('bairro').value = endereco.bairro
-    document.getElementById('cidade').value = endereco.localidade
-    document.getElementById('estado').value = endereco.uf
-}
 
 const eNumero = (numero) => /^[0-9]+$/.test(numero); //verificando se todos são numeros
 
@@ -42,8 +28,32 @@ const pesquisarCep = async () => {
 }
 
 
+//TRABALHANDO COM A DOM 
+const limparFormulario = () => {
+    document.getElementById('endereco').value = ''
+    document.getElementById('bairro').value = ''
+    document.getElementById('cidade').value = ''
+    document.getElementById('estado').value = ''
+}
 
+const preencherFormulario = (endereco) => {
+    document.getElementById('endereco').value = endereco.logradouro
+    document.getElementById('bairro').value = endereco.bairro
+    document.getElementById('cidade').value = endereco.localidade
+    document.getElementById('estado').value = endereco.uf
+}
 
 
 document.getElementById('cep') //pegando o id CEP
     .addEventListener('focusout', pesquisarCep); //add o event ao sair do focus => pesquisarCep()
+
+
+
+//redirecionando para o Google Maps
+const pesquisar = () => {
+    const cep = document.getElementById('cep').value //pegando o valor do input
+
+    open( `https://www.google.com/maps/place/${cep}`);
+}
+
+document.getElementById('button').addEventListener('click', pesquisar);

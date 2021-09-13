@@ -93,6 +93,8 @@ input::-webkit-inner-spin-button {
 }
 
 .container button {
+    padding: .5rem;
+
     justify-self: center;
     width: 200px;
     height: 50px;
@@ -100,10 +102,11 @@ input::-webkit-inner-spin-button {
     outline: none;
     cursor: pointer;
     background-color: var(--primary-color);
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: bold;
     border-radius: 2px;
 }
+
 
 footer {
     margin-bottom: 2rem;
