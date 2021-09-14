@@ -53,7 +53,7 @@ document.getElementById('cep') //pegando o id CEP
 const pesquisar = () => {
     const cep = document.getElementById('cep').value //pegando o valor do input
 
-    open( `https://www.google.com/maps/place/${cep}`);
+    open( `https://www.google.com/maps/search/${cep}`);
 }
 
 document.getElementById('button').addEventListener('click', pesquisar);
