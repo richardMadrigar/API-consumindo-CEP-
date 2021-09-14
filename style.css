@@ -168,10 +168,6 @@ footer {
         padding-bottom: 1rem;      
     }
     footer .icon{
-        position: absolute;
-        right: 3rem;
-    }
-    .icon img{
-        height: 1.4rem;
+        display: none;
     }
 }
