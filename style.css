@@ -108,20 +108,33 @@ button {
 
 
 footer {
+    padding: .3rem;
+    
     display: flex;
+    align-items: center;
     justify-content: center;
     
     color: var(--primary-color);
 
     position:absolute;
-    bottom: 1rem;
+    bottom: .3rem;
     width:100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon{  
+    cursor: pointer;
+    margin-left: 1.5rem;  
+}
+
+.icon img{
+    height: 2rem;
 }
 
 
-
+/* MEDIA@ */
 @media(max-width: 600px ){
-
     .title{
         margin-top: 2rem;
         font-size: 2rem;
@@ -133,6 +146,7 @@ footer {
     .section2{
         display: inline;
     }
+
     .inputbox{
         width: 80%;
         margin-bottom: 2rem;
@@ -147,9 +161,17 @@ footer {
         width: 9rem;
         font-size: .7rem;
     }
+
     footer{
         font-size: .6rem;
         position: static;
         padding-bottom: 1rem;      
+    }
+    footer .icon{
+        position: absolute;
+        right: 3rem;
+    }
+    .icon img{
+        height: 1.4rem;
     }
 }
