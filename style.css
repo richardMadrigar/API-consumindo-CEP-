@@ -152,9 +152,6 @@ footer {
     footer{
         font-size: .6rem;
         position: static;
-        padding-bottom: 1rem;
-        /* margin: .5rem; */
-        /* position: absolute; */
-        /* bottom: 10px; */
+        padding-bottom: 1rem;      
     }
 }
