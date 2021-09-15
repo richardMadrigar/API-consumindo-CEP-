@@ -3,7 +3,7 @@
 
 const eNumero = (numero) => /^[0-9]+$/.test(numero); //verificando se todos são numeros
 
-const cepValido = (cep) => cep.length == 8 && eNumero(cep); //verificando se tem 8 digitos
+const cepValido = (cep) => cep.length == 8 && cep == false && eNumero(cep); //verificando se tem 8 digitos
 
 
 const pesquisarCep = async () => {
