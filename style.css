@@ -85,7 +85,7 @@ button {
     align-items: center;
     justify-content: center;
 
-    background-color: var(--primary-color);
+    background-color:  rgb(118, 250, 118);
 
     padding: .5rem;
     margin: 0 auto;
@@ -104,6 +104,10 @@ button {
     border:none;
     outline: none;
     cursor: pointer;
+}
+button:hover{
+    background-color: var(--primary-color);
+    box-shadow: 0 0 20px 1px green;
 }
 
 
